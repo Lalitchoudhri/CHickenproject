@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="address">
+          <DataField>address</DataField>
+        </Field>
+        <Field Name="address1">
+          <DataField>address1</DataField>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+        </Field>
+        <Field Name="PostCode">
+          <DataField>PostCode</DataField>
+        </Field>
+        <Field Name="coutnry">
+          <DataField>coutnry</DataField>
+        </Field>
+        <Field Name="companyEMail">
+          <DataField>companyEMail</DataField>
+        </Field>
+        <Field Name="PhoneNo">
+          <DataField>PhoneNo</DataField>
+        </Field>
+        <Field Name="GSTno">
+          <DataField>GSTno</DataField>
+        </Field>
+        <Field Name="PanCard">
+          <DataField>PanCard</DataField>
+        </Field>
+        <Field Name="srNo">
+          <DataField>srNo</DataField>
+        </Field>
+        <Field Name="LR_RR_No_">
+          <DataField>LR_RR_No_</DataField>
+        </Field>
+        <Field Name="LR_RR_Date">
+          <DataField>LR_RR_Date</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Nameofconsigee">
+          <DataField>Nameofconsigee</DataField>
+        </Field>
+        <Field Name="consingee_city">
+          <DataField>consingee_city</DataField>
+        </Field>
+        <Field Name="consingee_PhoneNo">
+          <DataField>consingee_PhoneNo</DataField>
+        </Field>
+        <Field Name="consingee_state">
+          <DataField>consingee_state</DataField>
+        </Field>
+        <Field Name="Consingee_Address">
+          <DataField>Consingee_Address</DataField>
+        </Field>
+        <Field Name="consingee_GSTNo">
+          <DataField>consingee_GSTNo</DataField>
+        </Field>
+        <Field Name="consingee_Email">
+          <DataField>consingee_Email</DataField>
+        </Field>
+        <Field Name="consingee_PanNo">
+          <DataField>consingee_PanNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="HSN_SAC_Code">
+          <DataField>HSN_SAC_Code</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="Unit_Price">
+          <DataField>Unit_Price</DataField>
+        </Field>
+        <Field Name="Unit_PriceFormat">
+          <DataField>Unit_PriceFormat</DataField>
+        </Field>
+        <Field Name="vCGSTRate3">
+          <DataField>vCGSTRate3</DataField>
+        </Field>
+        <Field Name="vCGSTRate3Format">
+          <DataField>vCGSTRate3Format</DataField>
+        </Field>
+        <Field Name="vSGSTRate3">
+          <DataField>vSGSTRate3</DataField>
+        </Field>
+        <Field Name="vSGSTRate3Format">
+          <DataField>vSGSTRate3Format</DataField>
+        </Field>
+        <Field Name="vIGSTRate3">
+          <DataField>vIGSTRate3</DataField>
+        </Field>
+        <Field Name="vIGSTRate3Format">
+          <DataField>vIGSTRate3Format</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="AmountInWords">
+          <DataField>AmountInWords</DataField>
+        </Field>
+        <Field Name="Notext1">
+          <DataField>Notext1</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
